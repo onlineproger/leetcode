@@ -38,4 +38,3 @@ class Solution:
         # Начинаем с 0, родители отсутствуют
         dfs(0, -1, self.edges, seats)
         return self.fuel
-    
