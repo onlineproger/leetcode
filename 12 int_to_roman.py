@@ -50,3 +50,16 @@ class Solution:
             ) + self.roman
             chars_position += 2
         return self.roman
+
+
+class Solution2:
+    def int_to_roman(self, num: int) -> str:
+        M = ["", "M", "MM", "MMM"]
+        C = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+        X = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+        I = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+        return M[num // 1000] + C[(num % 1000) // 100] + X[(num % 100) // 10] + I[num % 10]
+
+s2 = Solution2()
+result = s2.int_to_roman(num=1994)
+print(result)
